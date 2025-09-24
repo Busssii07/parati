@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta de Cumpleaños</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe0e0, #fff5f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .sobre {
+      position: relative;
+      width: 90vw;
+      max-width: 600px;
+      height: auto;
+      background: #f8d7da;
+      border: 2px solid #c2185b;
+      border-radius: 10px;
+      padding-top: 60px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 1s;
+    }
+
+    .tapa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #c2185b;
+      transform-origin: top;
+      transition: transform 1s;
+      z-index: 2;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+
+    .mensaje {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0;
+      transition: opacity 1s;
+      z-index: 1;
+    }
+
+    .mensaje strong {
+      color: #c2185b;
+      font-size: 18px;
+    }
+
+    .sobre.abierto .tapa {
+      transform: rotateX(180deg);
+    }
+
+    .sobre.abierto .mensaje {
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      .mensaje {
+        font-size: 15px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="sobre" onclick="this.classList.toggle('abierto')">
+  <div class="tapa"></div>
+  <div class="mensaje">
+    <strong>🌟 Feliz cumpleaños 🎂✨</strong><br><br>
+    Hoy es tu día, y aunque ya no estemos juntos, quería escribirte algo bonito. Porque a pesar de todo, te sigo deseando lo mejor. Que este año te traiga momentos reales, gente que te abrace de verdad, y sueños que sí se cumplan 🫶.<br><br>
+    Lo nuestro no salió como pensábamos… pero no me arrepiento. Al contrario. Fuiste una luz en medio de días grises, y eso no se olvida. No te guardo rencor, ni tristeza. Solo gratitud. Porque fuiste lo mejor que me pasó en mucho tiempo, y eso vale más que cualquier final 💖.<br><br>
+    Gracias por existir en mi historia. Gracias por los recuerdos, por las risas, por enseñarme cosas que ni tú sabes que me enseñaste. Espero que hoy te sientas querido, aunque sea desde lejos.<br><br>
+    Feliz vuelta al sol ☀️<br>
+    <em>Con cariño, alguien que te quiso de verdad</em>
+  </div>
+</div>
+
+</body>
+</html>
